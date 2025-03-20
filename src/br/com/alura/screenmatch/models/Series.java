@@ -1,5 +1,7 @@
 package br.com.alura.screenmatch.models;
 
+import br.com.alura.screenmatch.calculations.Classifiable;
+
 public class Series extends Title{
     private int seasons;
     private boolean active;
@@ -37,4 +39,12 @@ public class Series extends Title{
     public void setActive(boolean active) {
         this.active = active;
     }
+
+//    ReWrite the method getDurationInMinutes, first wrote in Title
+    @Override
+    public int getDurationInMinutes() {
+        return seasons * episodesPerSeason * minutesPerEpisode;
+    }
+
+
 }
