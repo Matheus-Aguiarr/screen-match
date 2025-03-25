@@ -25,7 +25,7 @@ public class Title implements Comparable<Title> {
 
         this.name = myTitleOmdb.title();
         this.yearOfRelease = Integer.valueOf(myTitleOmdb.year());
-        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,3));
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0,2));
 
     }
 
@@ -89,6 +89,6 @@ public class Title implements Comparable<Title> {
 
     @Override
     public String toString() {
-        return "Name: " + this.name + "\nYear of release: " + this.yearOfRelease + "\nDuration in minutes: " + this.durationInMinutes;
+        return "\nName: " + this.name + "\nYear of release: " + this.yearOfRelease + "\nDuration in minutes: " + this.durationInMinutes;
     }
 }
